@@ -1,0 +1,140 @@
+:root{
+    --color-primario: #F2F0F0;
+    --color-secundario: #591902;
+    --color-tres: #A65F37;
+    --color-cuatro: #D99559;
+    --color-cinco: #6F8C07;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    background-color:var(--colorprimario);
+    font-family:Arial, Helvetica, sans-serif;
+    width: 100vw;
+    height: 100vh; 
+}
+
+header {
+    width: 100%;
+    height: fit-content ;
+    background-color: var(--color-tres);
+    border-bottom: var(--color-secundario) .4rem solid;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo{ 
+    margin-left: auto ;
+    margin-right: auto;
+    display: inline-block;
+    justify-content: center;
+}
+
+.logo img{
+    height: 6rem;
+    max-height: 8rem;
+    position:relative;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-right: auto;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
+}
+
+.nav li{
+    display: inline-block;
+    font-size: 1.8rem;
+    border-left: var(--color-primario) .1rem solid;
+    padding-left: .5rem;
+    
+}
+
+.nav li a{
+    display: flex;
+    flex-wrap: wrap;
+    color:var(--color-primario);
+    text-decoration: none;
+    padding: .3rem;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.c1,.c2, .c3{
+    margin-top: 1rem;
+    width: 100%;
+    min-width: 150px;
+    height: 30rem;
+    text-align: center;
+    font-size: 2rem;
+}
+.c1{
+    background-color: yellow;
+}
+.c2{
+    background-color: blue;
+    margin-bottom: 1rem;
+}
+.c3{
+    background-color: teal;
+}
+
+footer{
+    width: 100%;
+    height: fit-content ;
+    background-color: var(--color-tres);
+    border-top: var(--color-secundario) .4rem solid;
+    display: inline-block;
+}
+
+.barrasocial {
+   
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    text-decoration: none;
+    justify-content: space-evenly;
+
+    
+}
+
+.barrasocial img{
+    height: 3rem;
+    margin-left: 2rem;
+}
+
+.barrasocial li{
+    display: inline-block;
+    margin-top: 2rem;
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+}
+
+.footer p{
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 2rem;
+    
+}
+
