@@ -32,7 +32,9 @@
     overflow-y: auto;
     transition: width 500ms;
 }
-
+button .tab-content{
+    margin-left: 200px;
+}
 .sidebar-header {
     display: flex;
     justify-content: space-between;
