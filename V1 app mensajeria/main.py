@@ -6,7 +6,7 @@ import secrets
 import enviomail
 
 
-app = Flask (__name__)
+app = Flask(__name__)
 
 
 secret = secrets.token_urlsafe(32)
@@ -40,7 +40,7 @@ def login():
         global originuser
         if len(response)==0:
             originuser=""
-            flash("Usuario inexistente o contraseña invalida")
+            #flash("Usuario inexistente o contraseña invalida")
             return render_template("principal.html")
         else:
             originuser=usu
@@ -76,7 +76,7 @@ def register():
         response=controlador.registrar(name,usu,pas2,codact2)
 
         
-        flash(response)
+        #flash(response)
         return render_template("inicio.html")
         
 
@@ -84,15 +84,15 @@ def register():
 def validate():
     if request.method == 'POST':
         codact=request.form["txtcodigo"]
-        codac=codac.replace("SELECT","").replace("DELETE","").replace("INSERT","").replace("WHERE","").replace("UPDATE","")
+        #codac=codac.replace("SELECT","").replace("DELETE","").replace("INSERT","").replace("WHERE","").replace("UPDATE","")
 
     response=controlador.activate(codact)
 
     if len(response)==0:
-        flash("El codigo es incorrecto intente de nuevo")
+        #flash("El codigo es incorrecto intente de nuevo")
         return render_template("inicio.html")
     else:
-        flash("usuario activo")
+        #flash("usuario activo")
         return render_template("inicio.html")   
 
 
@@ -105,7 +105,7 @@ def enviarMAIL():
         mensaje=request.form["mensaje"]
         controlador.crear_registro(originuser,destino,asunto,mensaje)
         mensaje2= "tiene nuevos mensajes"
-        #enviomail.enviar(destino,mensaje2,"Nuevo mensaje recibido") # aca desactivar para correo de la u
+        enviomail.enviar(destino,mensaje2,"Nuevo mensaje recibido") # aca desactivar para correo de la u
         return "Mensaje enviado"
 
 
@@ -130,5 +130,3 @@ def Actualizapas():
         #flash("clave actualizada")
         return "Password actualizada"
 
-
-    

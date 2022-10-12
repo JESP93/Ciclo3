@@ -1,4 +1,3 @@
-from ast import Try
 import sqlite3
 
 def validarusua(user,password):
